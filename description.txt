@@ -1,0 +1,19 @@
+El conjunto de datos contiene 541909 registros de transacciones realizadas por una tienda en línea británica; entre las fechas 01/12/2010 y 09/12/2011.
+Para cada transacción se tienen 8 campos de información:
+
+- *InvoiceNo*: Identificador único para cada factura (cadena alfanumérica)
+- *StockCode*: Identificador unico para cada producto (cadena alfanumérica)
+- *Description*: Nombre del producto (texto)
+- *Quantity*: Unidades del producto por transacción (entero)
+- *InvoiceDate*: Fecha y hora de la transacción (fecha y hora)
+- *UnitPrice*: Precio unitario del producto (decimal)
+- *CustomerID*: Identificador unico para cada cliente (entero)
+- *Country*: País de residencia del cliente (texto)
+
+A partir de este conjunto de datos se puede generar las siguientes preguntas:
+
+* Que productos son los más comprados?
+* Existen productos que son comprados juntos?
+* Qué clientes son los más valiosos?
+* Cuales son las características de los clientes valiosos?
+* Existen patrones en el comportamiento de los clientes, de las ventas, o de los países a lo largo del tiempo?
