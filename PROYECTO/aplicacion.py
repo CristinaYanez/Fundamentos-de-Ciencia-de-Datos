@@ -4,6 +4,7 @@ import joblib
 
 import os
 kmeans_pipeline=joblib.load(os.path.join(os.path.dirname(__file__), "kmeans_pipeline.pkl"))
+rf_pipeline=joblib.load(os.path.join(os.path.dirname(__file__), "random_forest_pipeline.pkl"))
 
 products = pd.read_csv('archive/products.csv')
 team = pd.read_csv('archive/sales_teams.csv') 
@@ -13,7 +14,7 @@ location_options=accounts['office_location'].fillna('').unique()
 st.title("Simulador de Ventas")
 
 # kmeans_pipeline = joblib.load("kmeans_pipeline.pkl")
-rf_pipeline = joblib.load("random_forest_pipeline.pkl")
+# rf_pipeline = joblib.load("random_forest_pipeline.pkl")
     
 st.header("Información del cliente")
 with st.form("cluster_input_form"):
@@ -43,4 +44,5 @@ with st.form("cluster_input_form"):
         model_df['predictions']=model_df['predictions'].apply(lambda x: round(x,2))
         max_row = model_df.loc[model_df['predictions'].idxmax()]
         st.write(max_row)
+
 
