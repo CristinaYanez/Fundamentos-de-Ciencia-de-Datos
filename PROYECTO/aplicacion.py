@@ -40,9 +40,10 @@ with st.form("cluster_input_form"):
         model_df['product']=product
         model_df=model_df.merge(products, on='product', how='left')
         predictions = rf_pipeline.predict(model_df)
-        model_df['predictions']=predictions
-        model_df['predictions']=model_df['predictions'].apply(lambda x: round(x,2))
-        max_row = model_df.loc[model_df['predictions'].idxmax()]
+        model_df['predicción']=predictions
+        model_df['predicción']=model_df['predicción'].apply(lambda x: round(x,2))
+        max_row = model_df.loc[model_df['predicción'].idxmax()]
         st.write(max_row)
+
 
 
